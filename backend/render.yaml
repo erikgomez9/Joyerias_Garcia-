@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: joyerias-garcia-api
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install express
+    startCommand: node app.js
+    rootDir: backend
+    envVars:
+      - key: VERIFY_TOKEN
+        value: vibecode
+      - key: NODE_ENV
+        value: production
